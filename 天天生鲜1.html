@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="nav">
+            <span>欢迎您来天天生鲜！</span>
+            <ul>
+                <li>欢迎您:<a href="#">张山</a></li>
+                <li><a href="#">我的购物车</a></li>
+                <li><a href="#">我的订单</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="search box">
+        <ul>
+            <li><img src="./logo.png" alt="天天生鲜"></li>
+            <li class="inp">
+                <img src="./search.png" alt="搜索" id="icon">
+                <input type="text" placeholder="搜索"><button>搜索</button>
+            </li>
+            <li class="buycar">
+                <a href="#"><img src="./buycar.png" alt=""><span>我的购物车</span></a><span>0</span>
+
+            </li>
+        </ul>
+    </div>
+    <main>
+        <div class="show">
+            <ul class="navs  box clearfix">
+                <li>全部商品分类</li>
+                <li>首页</li>
+                <li>手机生鲜</li>
+                <li>抽奖</li>
+            </ul>
+        </div>
+        <!-- 新鲜水果 -->
+        <div class="fruits box clearfix">
+            <ul class="fruit ">
+                <li><a href="#"><img src="./icon01.png" alt="水果图标"><span>新鲜水果</span>〉</a></li>
+                <li><a href="#"><img src="./icon02.png" alt="水果图标"><span>新鲜水果</span>〉</a></li>
+                <li><a href="#"><img src="./icon03.png" alt="水果图标"><span>新鲜水果</span>〉</a></li>
+                <li><a href="#"><img src="./icon04.png" alt="水果图标"><span>新鲜水果</span>〉</a></li>
+                <li><a href="#"><img src="./icon05.png" alt="水果图标"><span>新鲜水果</span>〉</a></li>
+                <li><a href="#"><img src="./icon06.png" alt="水果图标"><span>新鲜水果</span>〉</a></li>
+            </ul>
+            <div class="slide">
+                <div class="image">
+                    <img src="./slide0.jpg" alt="">
+                </div>
+                <div class="circle">
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <div class="direction">
+                    <img src="./leftarrow.png" alt="" id="lef">
+                    <img src="./rightarrow.png" alt="" id="rig">
+                </div>
+            </div>
+            <!-- 右侧图片 -->
+            <div class="rightImg">
+                <img src="./1.png" alt="">
+                <img src="./2.png" alt="">
+            </div>
+        </div>
+        <!-- 海鲜水产 -->
+        <div class="seafood box ">
+            <!-- 头部导航 -->
+            <div class="seafoodNav clearfix">
+                <p>海鲜水产</p>
+                <ul>
+                    <li style="border-left: 3px solid #ccc;"><a href="#">深海鳕鱼</a></li>
+                    <li><a href="#">帝王蟹</a></li>
+                </ul>
+                <a href="#">查看更多>></a>
+            </div>
+            <!-- 海鲜广告 -->
+            <div class="seafoodAdv clearfix">
+                <!-- 海鲜大图 -->
+                <img src="./fish1.jpg" alt="海鲜盛宴">
+                <!-- 海鲜详情 -->
+                <div class="seafoodDetail">
+                    <a href="#">
+                        <p>基围虾</p>
+                        <img src="./xia.jpg" alt="基围虾">
+                        <h4>￥39.9</h4>
+                    </a>
+                </div>
+                <div class="seafoodDetail">
+                    <a href="#">
+                        <p>基围虾</p>
+                        <img src="./xia.jpg" alt="基围虾">
+                        <h4>￥39.9</h4>
+                    </a>
+                </div>
+                <div class="seafoodDetail">
+                    <a href="#">
+                        <p>基围虾</p>
+                        <img src="./xia.jpg" alt="基围虾">
+                        <h4>￥39.9</h4>
+                    </a>
+                </div>
+                <div class="seafoodDetail">
+                    <a href="#">
+                        <p>基围虾</p>
+                        <img src="./xia.jpg" alt="基围虾">
+                        <h4>￥39.9</h4>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        // 获取轮播图最外层的父盒子元素
+        var slide = document.getElementsByClassName('slide');
+        // 获取轮播图的所有图片
+        var allImg = document.getElementsByClassName('image');
+        var imgs = allImg[0].getElementsByTagName('img');
+        // 获取所有的圆点
+        var div = document.getElementsByClassName('circle');
+        var ul = div[0].getElementsByTagName("ul");
+        var lis = ul[0].getElementsByTagName("li");
+        // 获取左右按钮
+        var leftbtn = document.getElementById('lef');
+        var rightbtn = document.getElementById('rig');
+        // 让第一张图片的小圆点变成蓝色
+        lis[0].style.backgroundColor = "blue";
+        // 显示当前图片的下标
+        var currentImg = 0;
+        // 给个定时器让其自动轮播
+        var timer = setInterval(func, 2000);
+        function func() {
+            changeImg();
+            //    自增
+            currentImg++;
+        }
+        function changeImg() {
+            // 当图片在第第四张 也就是currentImg=3时  让currentImg=0
+            if (currentImg === lis.length) currentImg = 0;
+            if (currentImg <0) currentImg = lis.length-1;
+            // 当前图片改变时 修改当前图片 ./slide0.jpg
+            imgs[0].src = "./slide" + currentImg + ".jpg";
+            for (var i = 0; i < lis.length; i++) {
+                //    让所有的变成绿色
+                lis[i].style.backgroundColor = "#37ab40";
+            }
+            // 当前的变成蓝色
+            lis[currentImg].style.backgroundColor = "blue";
+        }
+        // 鼠标移入事件
+        slide[0].addEventListener("mouseover", function () {
+            // 清除定时器
+            clearInterval(timer);
+            // 左右按钮显示
+            leftbtn.style.display = "block";
+            rightbtn.style.display = "block"
+        })
+        // 鼠标移出事件
+        slide[0].addEventListener("mouseout", function () {
+            // 启动定时器
+            timer = setInterval(func, 1000);
+            // 隐藏左右按钮
+            leftbtn.style.display = "none";
+            rightbtn.style.display = "none";
+        })
+        // 左右按钮移入移出事件
+        leftbtn.addEventListener("mouseover", function () {
+            this.style.backgroundColor = "rgba(0,0,0,0.6)";
+        })
+        leftbtn.addEventListener("mouseout", function () {
+            this.style.backgroundColor = "rgba(0,0,0,0.2)";
+        })
+        rightbtn.addEventListener("mouseover", function () {
+            this.style.backgroundColor = "rgba(0,0,0,0.6)";
+        })
+        rightbtn.addEventListener("mouseout", function () {
+            this.style.backgroundColor = "rgba(0,0,0,0.2)";
+        })
+        // 左右按钮点击事件
+        leftbtn.addEventListener("click", function () {
+            // 自减
+            currentImg--;
+            // 修改图片路径
+            changeImg();
+        })
+        rightbtn.addEventListener("click", function () {
+            // 自增
+            currentImg++;
+            // 修改图片路径
+            changeImg();
+        })
+        // 移入小圆圈切换图片
+        for (var j = 0; j < lis.length; j++) {
+            lis[j].addEventListener("mouseover", function (i) {
+               var arr = [];
+                for(var k = 0; k < lis.length; k++){
+                    arr.push(lis[k])
+                }
+               currentImg =  arr.indexOf(this);
+               changeImg();
+                console.log(arr.indexOf(this));
+            })
+        }
+    </script>
+</body>
+
+</html>

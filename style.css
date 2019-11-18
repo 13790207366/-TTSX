@@ -1,0 +1,244 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color:green;
+}
+a:visited{
+    color:purple;
+}
+li{
+    list-style: none;
+}
+.clearfix:after{/*伪元素是行内元素 正常浏览器清除浮动方法*/
+    content: "";
+    display: block;
+    height: 0;
+    clear:both;
+    visibility: hidden;
+}
+.clearfix{
+    *zoom: 1;/*ie6清除浮动的方式 *号只有IE6-IE7执行，其他浏览器不执行*/
+}
+.box{
+    width: 1200px;
+    margin:0 auto;
+}
+.header{
+    background: #f7f7f7;
+    border-bottom: 1px solid #f0f0f0;
+    border-top:1px solid #e1e1e1;
+    padding: 10px 0;
+}
+
+.nav{
+    width: 1200px;
+    margin: 0 auto;
+}
+.nav>ul{
+    float: right;
+}
+.nav>ul>li{
+    padding: 0 15px;
+    float: left;
+}
+.nav>ul>li:nth-child(2){
+    border-left: 2px solid #ccc;
+    border-right: 2px solid #ccc;
+}
+.search{
+    padding:20px 0;
+    background: #fff;
+}
+.search>ul{
+    display: flex;
+}
+.search>ul>li:nth-child(1){
+    flex:2;
+    text-align: left;
+}
+.search>ul>li:nth-child(3){
+    flex:2;
+    text-align: right;
+}
+.search>ul>li:nth-child(2){
+    flex:3;
+    text-align: center;
+    position: relative;
+}
+#icon{
+    position: absolute;
+    left: 9px;
+    top: 26px;
+}
+.inp{
+    line-height: 63px;
+}
+.inp>input{
+    width: 410px;
+    height: 30px;
+    line-height: 30px;
+    border:1px solid #37ab40;
+    padding-left: 30px;
+    outline: none;
+}
+.inp>button{
+    /* vertical-align: middle; */
+    /* box-sizing: content-box; */
+    width: 70px;
+    height: 32px;
+    line-height: 32px;
+    background: #37ab40;
+    border:none;
+    color:#fff;
+    outline: none;
+}
+.buycar{
+    line-height:63px;
+}
+.buycar>a{
+    border:1px solid #efefef;
+    display: inline-block;
+    height: 30px;
+    vertical-align: middle;
+    width: 150px;
+    line-height: 30px;
+    text-align: left;
+}
+.buycar>span{
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    background: #ff8900;
+    vertical-align: middle;
+    text-align: center;
+    color: #fff;
+}
+.buycar>a>img{
+    padding:0 15px 0 5px;
+    vertical-align: middle;
+}
+.show{
+    border-bottom:3px solid #37ab40;
+}
+
+.show>.navs>li{
+    float: left;
+    padding:10px 35px 10px 35px;
+    font-size: 16px;
+}
+.show>.navs>li:nth-child(1){
+    background: #37ab40;
+    color:#fff;
+}
+.fruit{
+    float: left;
+    margin-bottom: 25px;
+}
+.fruit>li{
+    line-height: 44px;
+    border-bottom: 1px solid #ccc;
+   
+}
+.fruit>li>a>span{
+   padding:28px;
+}
+.fruit>li>a>img{
+    vertical-align: middle;
+}
+.slide{
+    float: left;
+}
+.slide>.image{
+    width:760px;
+    height:270px;
+    overflow: hidden;
+}
+.slide>.circle>ul{
+    position: relative;
+}
+.slide>.circle>ul>li{
+    width: 12px;height: 12px;
+    border:1px solid #ccc;
+    border-radius: 50%;
+    background: #37ab40;
+}
+.slide>.circle>ul>li:nth-child(1){
+    position: absolute;
+    left: 350px;
+    top: -20px;
+}
+.slide>.circle>ul>li:nth-child(2){
+    position: absolute;
+    left: 374px;
+    top: -20px;
+}
+.slide>.circle>ul>li:nth-child(3){
+    position: absolute;
+    left: 398px;
+    top: -20px;
+}
+.slide>.direction{
+    position: relative;
+}
+.slide>.direction:hover{
+    cursor: pointer;
+}
+.slide>.direction>img{
+    position: absolute;
+    display: none;
+}
+#lef{
+    left: 8px;top: -150px;
+}
+#rig{
+    right: 8px;top: -150px;
+}
+.fruits>.rightImg{
+    /* float: right; */
+    /* float: left; */
+    line-height: 0;
+    /* vertical-align: top; */
+}
+.seafood>.seafoodNav{
+    border-bottom:2px solid #37ab40;
+}
+.seafood>.seafoodNav>p{
+    float: left;
+    font-size: 20px;
+    color:#37ab40;
+}
+.seafood>.seafoodNav>ul{
+    float: left;
+}
+.seafood>.seafoodNav>a{
+    float: right;
+    font-size: 13px;
+}
+.seafood>.seafoodNav>ul>li{
+    float: left;
+    margin:5px 20px 0 20px;
+    padding-left: 5px;
+    font-size: 13px;
+}
+.seafood>.seafoodAdv>img{
+    float: left;
+}
+.seafood>.seafoodAdv>.seafoodDetail{
+    float: left;
+    width: 249px;
+    height: 297px;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    line-height: 56px;
+}
+.seafoodAdv>.seafoodDetail>a>p{
+    font-size: 13px;
+}
+.seafoodAdv>.seafoodDetail>a>h4{
+    color:red;
+}

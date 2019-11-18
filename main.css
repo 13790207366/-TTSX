@@ -1,0 +1,264 @@
+body{
+    margin:0;
+    padding:0;
+    font-size: 12px;
+    color: #666666;
+}
+    /* 1.最上部最外侧  */
+.box{
+    height:29px;
+    background: #f7f7f7;
+    border-bottom: 1px solid #dddddd;
+    margin:0;
+}
+ /* 1.1 内部盒子 */
+.con{
+    width:1200px;
+    height: 29px;
+    margin: 0 auto;
+}
+/* 1.2天天生鲜欢迎您设置 */
+.con h1{
+    width:250px;
+    height:29px;
+    float:left;
+    font-size:12px;
+    font-weight: normal;
+    line-height: 29px;
+    margin:0;
+    /* padding:0; */
+
+}
+/* 1.3右侧盒子设置 链接设置 span标签设置 */
+.reright{
+    height:29px;
+    line-height: 29px;
+    float:right;
+}
+.con a{
+    text-decoration: none;
+    font-size:12px;
+    line-height: 29px;
+    padding:5px;
+}
+.con span{
+    font-size:8px;
+}
+
+/* 2.搜索部分设置，最外侧盒子与内侧盒子 */
+.search{
+    height:90px;
+}
+
+.searchcon{
+    width:1200px;
+    height:90px;
+    margin:0 auto;
+    padding:0;
+}
+
+/* 2.1图标设置 */
+.searchcon a{
+    float:left;
+    margin-top:-12px;
+    padding:0;
+
+}
+
+/* 2.2搜索框盒子与搜索盒子设置 */
+.searchcar{
+    width:618px;
+    height:38px;
+    border:1px solid #37ab40;
+    margin-top: 36px;
+    margin-left: 280px;
+}
+/* 2.3搜索输入盒子设置 */
+.searchcar input{
+    outline: none;
+    border:0;
+}
+.searchtext{
+    width:516px;
+    height:38px;
+    line-height: 38px;
+    text-indent:38px;
+    background: url(search.png) no-repeat 12px 9px;
+}
+    /* 2.4搜索文本设置 */
+.searchsubmit{
+    width:100px;
+    height:39px;
+    color:white;
+    font-size:14px;
+    line-height: 39px;
+    text-align: center;
+
+    background-color: #37ab40;
+  
+    float:right;
+}
+
+/* 2.5购物车设置 */
+.search .buycar{
+    width:200px;
+    height:40px;
+    margin-top:-27px; 
+    float:right;
+
+   
+   
+}
+/* 2.6设置购物车框 以及购物车文字设置 */
+.buycar a{
+    width:158px;
+    height:38px;
+   
+    font-size:14px;
+    color:#37ab40;
+
+    text-indent:56px;
+    line-height: 38px;
+    text-decoration: none;
+
+    border:1px solid #dddddd;
+    background: url(buycar.png) no-repeat 9px 6px #f7f7f7;
+
+}
+
+/* 2.7设置span标签 */
+.buycar span{
+    width:40px;
+    height:40px;
+    color:white;
+    font-size:18px;
+    background: #ff8800;
+
+    float:right;
+    line-height: 40px;
+    text-align: center;
+    margin-top:-12px;
+}
+
+
+/* 3.0设置最外侧盒子 */
+.cate{
+    height:40px;
+    margin-top: 10px;
+    border-bottom:2px solid #37ab40;
+}
+/* 3.1设置内侧盒子大小 */
+.catecon{
+    width:1200px;
+    height: 40px;
+    margin: 0 auto;
+}
+/* 3.2设置商品分类与行列表 */
+.catecon h3{
+    width:200px;
+    height:40px;
+    font-size:14px;
+    color:white;
+    background: #37ab40;
+    text-align: center;
+    line-height: 40px;
+    font-weight: normal;
+
+    margin-right:35px;
+    margin-top:0;
+    float:left;
+}
+/* 3.3设置列表 */
+.homelist{
+    float:left;
+    list-style: none;
+    margin-left: -50px;
+}
+
+.homelist li{
+    float:left;
+    line-height: 40px;
+    font-size:14px;
+    margin-top: -10px;
+}
+
+.homelist a{
+    margin:0 20px;
+    text-decoration: none;
+}
+.homelist span{
+    font-size:12px;
+}
+.homelist a:hover{
+    color:#ff8800;
+}
+
+/* 4.1slide */
+.slide{
+    width:1200px;
+    height: 270px;
+    margin:0 auto;
+    /* background-color: lightcoral; */
+}
+
+/* 4.11左侧列表 */
+.leftlist{
+    width:200px;
+    height:27px;
+    margin:0;
+    padding:0;
+    list-style: none;
+}
+/* 4.12列表居中 设置宽高  */
+.leftlist li{
+    width:198px;
+    height: 44px;
+    border:1px solid #dddddd;
+    text-align: center;
+    line-height: 44px;
+
+    background: url(sprite.png) no-repeat 34px -92px;
+}
+
+.leftlist li:nth-child(2){
+    background-position-y: -142px;
+}
+.leftlist li:nth-child(3){
+    background-position-y: -192px;
+}
+.leftlist li:nth-child(4){
+    background-position-y: -242px;
+}
+.leftlist li:nth-child(5){
+    background-position-y: -292px;
+}
+.leftlist li:nth-child(6){
+    background-position-y: -342px;
+}
+
+.leftlist a{
+    color:black;
+    font-size:14px;
+
+    text-decoration: none;
+    width:198px;
+    height:44px;
+}
+
+/* 4.2中间轮番图设置 */
+.slidpic{
+    width:760px;
+    height: 270px;
+    margin-left:160px;
+    position:relative;
+}
+
+.slidlist{
+    list-style: none;
+    width:3052px;
+    height:270px;
+}
+
+.slidlist li{
+    float:left;
+}
